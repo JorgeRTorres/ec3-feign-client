@@ -6,4 +6,5 @@ import pe.edu.idat.ec3_feign_client.client.placeholder.iuserservice.Personaje;
 @Service
 public class PersonajeService implements IPersonajeService {
 
+
 }
