@@ -8,6 +8,5 @@ public interface IPersonajeService {
 
     List<Personaje> obtenerPersonaje();
     Personaje obtenerPersonajePorId(Long id);
-    Personaje guardarPersonaje(Personaje personaje);
 
 }

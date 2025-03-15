@@ -1,5 +1,6 @@
 package pe.edu.idat.ec3_feign_client.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +19,14 @@ public class PersonajeController {
         this.iPersonajeService = iPersonajeService;
     }
 
+    @GetMapping
     public List<Personaje> getPersonaje(){
-        return null;
+        return iPersonajeService.obtenerPersonaje();
     }
 
+    @GetMapping("{id}")
     public Personaje getPersonajeById(@PathVariable Long id){
-        return null;
+        return iPersonajeService.obtenerPersonajePorId(id);
     }
 
 

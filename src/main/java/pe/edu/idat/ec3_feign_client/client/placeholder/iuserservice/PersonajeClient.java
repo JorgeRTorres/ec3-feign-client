@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "personajeClient",url = "https://rickandmortyapi.com")
+@FeignClient(name = "personajeClient",
+        url = "https://rickandmortyapi.com")
 public interface PersonajeClient {
 
     @GetMapping("/api/character")
