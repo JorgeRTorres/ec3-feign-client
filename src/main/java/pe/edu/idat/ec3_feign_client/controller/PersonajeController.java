@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pe.edu.idat.ec3_feign_client.client.placeholder.iuserservice.Personaje;
+import pe.edu.idat.ec3_feign_client.client.placeholder.iuserservice.PersonajeResponse;
 import pe.edu.idat.ec3_feign_client.service.IPersonajeService;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class PersonajeController {
     }
 
     @GetMapping
-    public List<Personaje> getPersonaje(){
+    public PersonajeResponse getPersonaje(){
         return iPersonajeService.obtenerPersonaje();
     }
 

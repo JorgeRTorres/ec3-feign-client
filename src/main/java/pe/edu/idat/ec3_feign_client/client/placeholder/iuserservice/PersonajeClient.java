@@ -11,7 +11,7 @@ import java.util.List;
 public interface PersonajeClient {
 
     @GetMapping("/api/character")
-    List<Personaje> findAll();
+    PersonajeResponse findAll();
 
     @GetMapping("/api/character/{id}")
     Personaje findById(@PathVariable("id") Long id);

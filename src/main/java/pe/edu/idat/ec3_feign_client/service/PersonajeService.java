@@ -3,6 +3,7 @@ package pe.edu.idat.ec3_feign_client.service;
 import org.springframework.stereotype.Service;
 import pe.edu.idat.ec3_feign_client.client.placeholder.iuserservice.Personaje;
 import pe.edu.idat.ec3_feign_client.client.placeholder.iuserservice.PersonajeClient;
+import pe.edu.idat.ec3_feign_client.client.placeholder.iuserservice.PersonajeResponse;
 
 import java.util.List;
 
@@ -15,8 +16,9 @@ public class PersonajeService implements IPersonajeService {
         this.personajeClient = personajeClient;
     }
 
+
     @Override
-    public List<Personaje> obtenerPersonaje() {
+    public PersonajeResponse obtenerPersonaje() {
         return personajeClient.findAll();
     }
 
